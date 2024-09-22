@@ -5,8 +5,9 @@ const app = express();
 
 // Middleware to parse incoming JSON requests
 app.use(bodyParser.json());
-app.use(cors());
-
+app.use(cors({
+    origin: 'https://bajaj-frontend-tau-ruddy.vercel.app' // Replace with your actual Vercel URL
+  }));
 // Basic route to check if the server is running
 app.get('/', (req, res) => {
   res.send('Backend is working!');

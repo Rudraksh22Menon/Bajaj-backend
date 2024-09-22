@@ -21,6 +21,11 @@ app.listen(PORT, () => {
 
 app.post('/bfhl', (req, res) => {
     const { data, file_b64 } = req.body;
+
+    if (file_b64) {
+        // Process the file if it's provided
+        // For example, validate the file here
+      }
   
     // Extract numbers and alphabets
     const numbers = data.filter(item => !isNaN(item));
